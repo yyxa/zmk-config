@@ -9,6 +9,12 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+  chosen {
+    zmk,split-role = "central";
+  };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
