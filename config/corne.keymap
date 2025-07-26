@@ -29,49 +29,49 @@
     combos {
         compatible = "zmk,combos";
 
-        a {
+        escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <1 0>;
+            key-positions = <1 2>;
         };
 
-        b {
+        capslock {
             bindings = <&kp CLCK>;
-            key-positions = <14 15>;
+            key-positions = <5 4>;
         };
 
-        c {
+        tab {
             bindings = <&kp TAB>;
-            key-positions = <2 3>;
+            key-positions = <3 4>;
         };
 
-        d {
+        backspace {
             bindings = <&kp BACKSPACE>;
+            key-positions = <9 8>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
             key-positions = <10 9>;
         };
 
-        e {
-            bindings = <&kp ENTER>;
-            key-positions = <22 21>;
-        };
-
-        f {
-            bindings = <&kp MINUS>;
-            key-positions = <19 20>;
+        prtsc {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <29 28>;
         };
 
         g {
             bindings = <&kp EQUAL>;
-            key-positions = <21 20>;
+            key-positions = <6 7>;
         };
 
-        h {
+        sys_reset_left {
             bindings = <&sys_reset>;
-            key-positions = <29 0>;
+            key-positions = <29 1>;
         };
 
-        j {
+        sys_reset_right {
             bindings = <&sys_reset>;
-            key-positions = <30 11>;
+            key-positions = <30 10>;
         };
     };
 
@@ -81,40 +81,40 @@
         default_layer {
             label = "0";
             bindings = <
-&trans  &kp Q       &kp W       &kp E         &kp R        &kp T        &kp Y       &kp U          &kp I           &kp O         &kp P          &trans
-&trans  &mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &kp G        &kp H       &mt RCTRL J    &mt RSHIFT K    &mt RALT L    &mt RGUI SEMI  &trans
-&trans  &kp Z       &kp X       &kp C         &kp V        &kp B        &kp N       &kp M          &mt LBRC COMMA  &mt RBRC DOT  &mt SQT FSLH   &trans
-                                &mo 1         &kp ESCAPE   &kp SPACE    &kp RETURN  &kp BACKSPACE  &mo 2
-            >;
-        };
-
-        number_layer {
-            label = "1";
-            bindings = <
-&none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
-&none  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
-&none  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
-                       &kp N1  &none   &none     &none   &none   &none
-            >;
-        };
-
-        bt_layer {
-            label = "2";
-            bindings = <
-&kp ESC       &kp LS(N1)    &kp LS(N2)      &kp LS(N3)    &kp LS(N4)    &kp LS(N5)     &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &none
-&none         &none         &kp LEFT_ARROW  &kp DEL       &kp RIGHT     &bt BT_CLR     &none       &none       &none       &none       &none       &none
-&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0  &bootloader    &none       &none       &none       &none       &none       &none
-                                            &none         &none         &none          &none       &none       &none
+&none  &kp Q       &kp W       &kp E         &kp R        &kp T        &kp Y       &kp U        &kp I           &kp O         &kp P          &none
+&none  &mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &kp G        &kp H       &mt RCTRL J  &mt RSHIFT K    &mt RALT L    &mt RGUI SEMI  &none
+&none  &kp Z       &kp X       &kp C         &kp V        &kp B        &kp N       &kp M        &mt LBRC COMMA  &mt RBRC DOT  &mt SQT FSLH   &none
+                               &mo 3         &mo 1        &kp SPACE    &kp RETURN  &mo 2        &trans
             >;
         };
 
         arrow_layer {
+            label = "1";
+            bindings = <
+&none  &none  &none     &kp UP    &sys_reset  &none        &none      &none  &none  &none  &none  &none
+&none  &none  &kp LEFT  &kp DOWN  &kp RIGHT   &none        &none      &none  &none  &none  &none  &none
+&none  &none  &none     &none     &none       &none        &none      &none  &none  &none  &none  &none
+                        &none     &trans      &kp SPACE    &kp ENTER  &none  &none
+            >;
+        };
+
+        number_layer {
+            label = "2";
+            bindings = <
+&none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
+&none  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
+&none  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
+                       &trans  &none   &none     &none   &trans  &none
+            >;
+        };
+
+        bt_layer {
             label = "3";
             bindings = <
-&none  &none           &kp UP_ARROW    &none      &sys_reset  &none    &none  &none  &none  &none  &none  &none
-&none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none       &none    &none  &none  &none  &none  &none  &none
-&none  &none           &none           &none      &none       &none    &none  &none  &none  &none  &none  &none
-                                       &none      &none       &none    &none  &none  &none
+&none         &none         &none           &none         &none         &none          &none  &none  &none  &none  &none  &none
+&none         &none         &kp LEFT_ARROW  &kp DEL       &kp RIGHT     &bt BT_CLR     &none  &none  &none  &none  &none  &none
+&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0  &bootloader    &none  &none  &none  &none  &none  &none
+                                            &none         &none         &none          &none  &none  &none
             >;
         };
     };
