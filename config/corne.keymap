@@ -81,10 +81,10 @@
         default_layer {
             label = "0";
             bindings = <
-&kp ESC       &kp Q  &kp W  &kp E      &kp R        &kp T                 &kp Y                &kp U           &kp I                     &kp O    &kp P     &kp BSPC
-&kp CAPSLOCK  &kp A  &kp S  &kp D      &kp F        &kp G                 &kp H                &kp J           &kp K                     &kp L    &kp SEMI  &kp RET
-&kp TAB       &kp Z  &kp X  &kp C      &kp V        &kp B                 &kp N                &kp M           &kp COMMA                 &kp DOT  &kp FSLH  &kp RSHFT
-                            &lt 3 SQT  &lt 2 SPACE  &mt LCTRL LEFT_WIN    &lt SYMBOLS_L SPACE  &kp LEFT_SHIFT  &mt LA(SQT) SINGLE_QUOTE
+&trans  &kp Q       &kp W       &kp E         &kp R        &kp T        &kp Y       &kp U          &kp I                 &kp O                &kp P          &trans
+&trans  &mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &kp G        &kp H       &mt RCTRL J    &mt RSHIFT K          &mt RALT L           &mt RGUI SEMI  &trans
+&trans  &kp Z       &kp X       &kp C         &kp V        &kp B        &kp N       &kp M          &mt LEFT_BRACE COMMA  &mt RIGHT_BRACE DOT  &mt SQT FSLH   &trans
+                                &mo 1         &kp ESCAPE   &kp SPACE    &kp RETURN  &kp BACKSPACE  &mo 2
             >;
         };
 
