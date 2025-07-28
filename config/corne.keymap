@@ -31,52 +31,52 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <3 2>;
+            key-positions = <3 4>;
         };
 
         capslock {
             bindings = <&kp CLCK>;
-            key-positions = <4 3>;
+            key-positions = <4 5>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <2 1>;
+            key-positions = <2 3>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <7 6>;
+            key-positions = <7 8>;
         };
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <8 7>;
+            key-positions = <8 9>;
         };
 
         prtsc {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <28 27>;
+            key-positions = <28 29>;
         };
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <27 26>;
+            key-positions = <27 28>;
         };
 
         sys_reset_left {
             bindings = <&sys_reset>;
-            key-positions = <0 28>;
+            key-positions = <1 29>;
         };
 
         sys_reset_right {
             bindings = <&sys_reset>;
-            key-positions = <29 9>;
+            key-positions = <30 10>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <31 30>;
+            key-positions = <31 32>;
         };
     };
 
@@ -96,20 +96,20 @@
         arrow_layer {
             label = "1";
             bindings = <
-&none  &kp PG_DN     &kp PG_UP     &kp UP        &kp C_PP      &kp C_NEXT    &kp C_BRI_UP  &kp C_VOL_UP  &kp C_VOL_DN   &kp K_MUTE  &kp INS   &none
-&none  &kp LGUI      &kp LEFT      &kp DOWN      &kp RIGHT     &kp C_PREV    &kp C_BRI_DN  &kp RCTRL     &kp RSHFT      &kp RALT    &kp RGUI  &none
-&none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR    &none         &none         &none          &kp HOME    &kp END   &none
-                                   &kp TAB       &none         &kp SPACE     &kp ENTER     &none         &kp BACKSPACE
+&none  &kp PG_DN     &kp PG_UP     &kp UP        &kp C_PP      &kp C_NEXT    &kp C_BRI_UP   &kp C_VOL_UP  &kp C_VOL_DN  &kp K_MUTE  &kp INS   &none
+&none  &kp LGUI      &kp LEFT      &kp DOWN      &kp RIGHT     &kp C_PREV    &kp C_BRI_DN   &kp RCTRL     &kp RSHFT     &kp RALT    &kp RGUI  &none
+&none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR    &none          &none         &none         &kp HOME    &kp END   &none
+                                   &kp TAB       &none         &kp SPACE     &kp BACKSPACE  &none         &kp ENTER
             >;
         };
 
         number_layer {
             label = "2";
             bindings = <
-&none  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5       &kp MINUS  &kp N7        &kp N8         &kp N9        &kp BSLH  &none
-&none  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &kp F6       &kp EQUAL  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp RGUI  &none
-&none  &kp F11   &kp F10   &kp F9     &kp F8     &kp F7       &kp N0     &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none     &none
-                           &kp F12    &none      &kp SPACE    &kp ENTER  &none         &kp BACKSPACE
+&none  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5       &kp MINUS      &kp N7        &kp N8        &kp N9        &kp BSLH  &none
+&none  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &kp F6       &kp EQUAL      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp RGUI  &none
+&none  &kp F11   &kp F10   &kp F9     &kp F8     &kp F7       &kp N0         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none     &none
+                           &kp F12    &none      &kp SPACE    &kp BACKSPACE  &none         &kp ENTER
             >;
         };
     };
