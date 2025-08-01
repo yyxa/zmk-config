@@ -78,6 +78,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <31 32>;
         };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <38 28>;
+        };
     };
 
     keymap {
